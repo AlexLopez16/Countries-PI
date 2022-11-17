@@ -1,0 +1,26 @@
+.activity-btn {
+    padding: 10px;
+    background-color: #17c964;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.newActivity button:hover{
+    background-color: #0ba04e;
+}
+
+.newActivity{
+   text-align: right;
+   margin-right: 20px;
+   margin-top: 20px;
+}
+
+
+.error-title{
+    color: #dc3545;
+    text-align: center;
+    user-select: none;
+}

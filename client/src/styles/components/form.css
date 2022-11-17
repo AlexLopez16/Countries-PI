@@ -1,0 +1,152 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+    user-select: none;
+}
+
+.form h2 {
+    color: #dc3545;
+    margin-top: 0;
+}
+
+.form label {
+    font-weight: 500;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+
+    background-color: #eee;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    /* border: 1px solid #ddd; */
+    margin: 10px 0 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form input:focus{
+    outline: none;
+    border: 2px solid #0072f5;
+}
+
+.form input:focus::placeholder {
+    color: transparent;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: ce;
+}
+
+fieldset legend {
+    padding: 0 10px;
+    font-weight: 500;
+    text-align: left;
+}
+
+fieldset label {
+    padding-right: 20px;
+}
+
+fieldset input {
+    margin-right: 10px;
+}
+
+.difficult,
+.season {
+    text-align: center;
+}
+
+.difficult label,
+.season label {
+    font-weight: normal;
+}
+
+.error {
+    color: red;
+    font-weight: 800;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.form-btn {
+    display: block;
+    background-color: #0072f5;
+    color: #fff;
+    font-size: 0.9rem;
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    margin: auto;
+}
+
+.form-countries button {
+    margin: 10px 2px 0 2px;
+    color: #ffff;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: #dc3545;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-countries button:hover{
+    background-color: #c61a27;
+}
+
+.options select {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close{
+    position: relative;
+    top: 0;
+    left: 95%;
+    padding: 10px;
+    background-color: #c61a27;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0;
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: .5s ease all;
+}
+
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}

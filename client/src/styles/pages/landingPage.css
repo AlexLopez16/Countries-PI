@@ -1,0 +1,147 @@
+.clouds {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #13242f;
+}
+
+.clouds .title {
+    width: 120px;
+    height: 200px;
+
+    user-select: none;
+}
+
+.clouds span {
+    text-align: left;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    color: #adb5bd;
+}
+
+.map {
+    width: 167px;
+    height: 167px;
+    border-radius: 50%;
+    box-shadow: -15px -10px 0 0 rgba(0, 0, 0, .10) inset,
+        -40px -20px 0 0 rgba(0, 0, 0, .1) inset,
+        3px 3px 0 0 rgba(255, 255, 255, .2) inset;
+
+    background-image: url(../../assets/mapa.png);
+    background-size: cover;
+
+    animation: world-spin 6s infinite linear;
+
+    background-color: #219ebc;
+
+    border: 1px solid transparent;
+}
+
+.map:hover {
+    cursor: pointer;
+    border-color: #adb5bd
+}
+
+@keyframes world-spin {
+    from {
+        background-position: left center;
+    }
+
+    to {
+        background-position: -399.5px center;
+    }
+}
+
+
+.star {
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 50%;
+}
+
+.star:nth-child(2) {
+    top: 30%;
+    left: 20%;
+}
+
+.star:nth-child(3) {
+    top: 90%;
+    left: 88%;
+}
+
+.star:nth-child(4) {
+    top: 80%;
+    left: 10%;
+}
+
+.star:nth-child(5) {
+    top: 10%;
+    left: 95%;
+}
+
+.star:nth-child(6) {
+    top: 50%;
+    left: 80%;
+}
+
+.star:nth-child(7) {
+    top: 80%;
+    left: 62%;
+}
+
+.star:nth-child(8) {
+    top: 10%;
+    left: 5%;
+}
+
+.star:nth-child(9) {
+    top: 70%;
+    left: 30%;
+}
+
+.star:nth-child(10) {
+    top: 20%;
+    left: 70%;
+}
+
+.star:nth-child(2n) {
+    animation: star-pair 5s infinite;
+}
+
+@keyframes star-pair {
+    0%, 80% {
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255, .3);
+    }
+
+    90% {
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+    }
+}
+
+.star:nth-child(2n+1) {
+    animation: star-odd 5s infinite;
+}
+
+@keyframes star-odd {
+    0%, 35%, 50% {
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255, .3);
+    }
+
+    45% {
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+    }
+}

@@ -1,0 +1,73 @@
+.sidebar-container {
+    margin: 0px 10px;
+    width: 30vh;
+    /* width: 700px; */
+    /* height: 100vh; */
+    border: 1px solid #e5e5e5;
+    user-select: none;
+    
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.sidebar-container h3 {
+    color: #faa307;
+    font-weight: 700;
+}
+
+.sidebar-container p {
+    color: #949494;
+    font-weight: bold;
+}
+
+.sidebar-container button {
+    border: none;
+    background-color: transparent;
+    color: #dc2f02;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+
+}
+
+.sidebar-container button:hover {
+    cursor: pointer;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin-bottom: 5px;
+}
+
+.elements label {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #3e3e3e;
+    width: 100%;
+    text-align: left;
+}
+
+.elements label:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+
+hr {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+}
