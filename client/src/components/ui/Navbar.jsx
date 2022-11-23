@@ -30,13 +30,20 @@ export const Navbar = () => {
         if (e.key === 'Enter') {
             handleClick(e)
             e.target.blur()
+            history.push(`home?name=${value}`, { from: 'home' })
+        }
+    }
+
+    const refresh = () => {
+        if (history.location.pathname === '/home') {
+            window.location.reload()
         }
     }
 
     return (
         <div className='container'>
             <Link to='/home' style={{ textDecoration: 'none' }} >
-                <h2>
+                <h2 onClick={refresh}>
                     Hello <span>Countries</span>
                 </h2>
             </Link>
@@ -48,7 +55,7 @@ export const Navbar = () => {
                     to='/home'
                     style={{ textDecoration: 'none' }}
                 >
-                    <span>Home</span>
+                    <span onClick={refresh}>Home</span>
                 </NavLink>
                 <NavLink
                     exact

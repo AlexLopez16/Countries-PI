@@ -1,8 +1,8 @@
-
-import "../../styles/ui/pagination.css";
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { actualPage } from './../../actions/ui';
+
+import "../../styles/ui/pagination.css";
 
 export const Pagination = () => {
 

@@ -2,18 +2,15 @@
     width: 100%;
     height: 100vh;
     margin: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #13242f;
 }
 
 .clouds .title {
     width: 120px;
     height: 200px;
-
     user-select: none;
 }
 
@@ -36,11 +33,8 @@
 
     background-image: url(../../assets/mapa.png);
     background-size: cover;
-
     animation: world-spin 6s infinite linear;
-
     background-color: #219ebc;
-
     border: 1px solid transparent;
 }
 

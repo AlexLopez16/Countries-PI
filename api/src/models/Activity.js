@@ -1,9 +1,6 @@
 const { DataTypes, DATE } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
 
 const ActivitySchema = (sequelize) => {
-    // defino el modelo
     sequelize.define('Activity', {
         id: {
             type: DataTypes.INTEGER,

@@ -30,7 +30,6 @@ export const SideBar = () => {
     useEffect(() => {
         dispatch(getContinents())
         dispatch(getActivitiesUi())
-        // IMPLEMENTACION FILTER ACTIVITY
         dispatch(getActivities())
     }, [dispatch])
 
@@ -64,6 +63,14 @@ export const SideBar = () => {
     }
 
     const handleActivities = (e) => {
+
+        if (!e.target.checked) {
+            setCheckActivity({
+                ...checkActivity,
+                [e.target.id]: false
+            })
+        }
+
         for (const activity of activities) {
             if (activity.name === e.target.value) {
                 if (!e.target.checked) {
@@ -76,13 +83,10 @@ export const SideBar = () => {
             }
         }
 
-        // console.log(e.target.checked);
-        // console.log(e.target.id);
-
         if (e.target.checked) {
             setCheckActivity({
                 ...checkActivity,
-                [e.target.id]: e.target.checked
+                [e.target.id]: true
             })
         }
     }
@@ -95,8 +99,6 @@ export const SideBar = () => {
         }
         setFilterActivities([])
     }
-
-    // TODO: Hacer funcionar los botones de remove Activities y All
 
     return (
         <div className='sidebar-container'>
@@ -126,7 +128,13 @@ export const SideBar = () => {
                 activitiesUI.map((activity) => (
                     <div className="elements" key={activity}>
                         <label htmlFor={activity}>{activity}</label>
-                        <input type="checkbox" value={activity} id={activity} onChange={handleActivities} checked={checkActivity[activity]}/>
+                        <input
+                            type="checkbox"
+                            value={activity}
+                            id={activity}
+                            onChange={handleActivities}
+                            checked={checkActivity[activity]}
+                        />
                     </div>
                 ))
             }

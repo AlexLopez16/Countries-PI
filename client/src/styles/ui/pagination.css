@@ -2,11 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: 50px 0;
-
-    /* width: 100% - 596; */
-    /* margin: 0 596px; */
+    margin: 50px 0 100px 0;
 }
 
 .btn-container button{

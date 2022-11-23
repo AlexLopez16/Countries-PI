@@ -36,7 +36,6 @@ export const startUpdateActivity = (id, activity) => {
     return async (dispatch) => {
         try {
             const activityUpdate = await axios.put(`/activities/${id}`, activity);
-            console.log(activityUpdate)
 
             return dispatch({
                 type: types.activityUpdate,

@@ -8,18 +8,13 @@ router.get('/', async (req, res) => {
     const { name } = req.query;
 
     try {
-        let countries = await Country.findAll(
-            // {
-            //     attributes: ['name', 'continent', 'flag']
-            // }
-        )
+        let countries = await Country.findAll()
 
         if (name) {
             countries = await Country.findAll({
                 where: {
                     name: { [Op.iLike]: `${name}%` }
                 },
-                // attributes: ['name', 'continent', 'flag']
             })
         }
 

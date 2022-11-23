@@ -31,7 +31,6 @@ export const CountriesList = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-
         countrySearch
             ? dispatch(setCountrySearch(countrySearch))
 

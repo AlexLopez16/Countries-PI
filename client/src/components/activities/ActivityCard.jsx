@@ -37,28 +37,16 @@ export const ActivityCard = ({ id, name, difficulty, duration, season, countries
                     <p>DIFFICULTY:</p>
                     <p>DURATION:</p>
                     <p>SEASON:</p>
-                    {/* <p>COUNTRIES:</p> */}
                 </div>
                 <div className='data-acts'>
                     <p>{difficulty}</p>
                     <p>{duration} Hours</p>
                     <p>{season}</p>
-                    {/* <p>Mexico, France, Argentina, China</p> */}
                 </div>
 
             </div>
 
-            {/* <div style={{ textAlign: 'center', color: '#fff' }}>COUNTRIES</div>
-            <div className='countries-cont'>
-                <p>MEXICO</p>
-                <p>CHINA</p>
-                <p>ESPAÑA</p>
-                <p>ESPAÑA</p>
-            </div> */}
-
-
             {
-
                 (pathname === '/activities' &&
                     <div className='footer-activity'>
                         <button className='btn-delete' onClick={handleDelete}>DELETE</button>

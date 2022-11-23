@@ -2,19 +2,14 @@
     width: 300px;
     height: fit-content;
     background-color: #13242f;
-
     border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
     margin: 10px auto;
-    /* cursor: pointer; */
     display: inline-block;
-
     user-select: none;
-
     margin: 10px 20px;
-
     transition: height 0.5s ease-in-out;
 }
 
@@ -23,19 +18,17 @@
     font-weight: bold;
     color: #fff;
     padding: 15px;
-
     background-color: gray;
-
     text-transform: capitalize;
 }
 
-.content-activities{
+.content-activities {
     display: flex;
     justify-content: space-around;
     text-align: left;
 }
 
-.content-activities .tags-act{
+.content-activities .tags-act {
     color: rgba(255, 255, 255, 0.596);
 }
 
@@ -44,13 +37,13 @@
     font-weight: 600;
 }
 
-.footer-activity{
+.footer-activity {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer-activity button{
+.footer-activity button {
     text-align: center;
     padding: 10px;
     width: 100px;
@@ -58,19 +51,17 @@
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-
     border: none;
 }
 
-.btn-delete{
+.btn-delete {
     background-color: #dc3545;
 }
 
-.btn-edit{
+.btn-edit {
     background-color: #ffc107;
 }
 
-.footer-activity button:hover{
+.footer-activity button:hover {
     border-radius: 10px;
 }
-

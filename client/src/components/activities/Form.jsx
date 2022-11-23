@@ -49,7 +49,6 @@ export const Form = ({ openModal, setOpenModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target);
         for (let key in form) {
             if (form[key] === '') {
                 return setError(`${key.toUpperCase()} can't be empty`)
@@ -60,6 +59,11 @@ export const Form = ({ openModal, setOpenModal }) => {
             if (!/[0-9]/.test(form.duration) || form.duration < 1) {
                 return setError(`Type a valid duration`)
             }
+
+            if (/[\s]/.test(form.duration)) {
+                return setError(`Type a valid duration`)
+            }
+
             if (form.duration > 5) {
                 return setError('The duration of the activity is too long')
             }

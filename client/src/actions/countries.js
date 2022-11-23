@@ -3,6 +3,7 @@ import { types } from './../types/types';
 
 export const getCountries = () => {
     return async (dispatch) => {
+
         try {
             const countries = await axios.get(`/countries`)
 
