@@ -9,7 +9,7 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
-axios.defaults.baseURL = process.env.REACT_APP_API;
+axios.defaults.baseURL = `${process.env.REACT_APP_API}`;
 
 ReactDOM.render(
   <React.StrictMode>
