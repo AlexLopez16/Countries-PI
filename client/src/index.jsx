@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import axios from "axios";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config()
+// dotenv.config()
 
 axios.defaults.baseURL = `${process.env.REACT_APP_API}`;
 
