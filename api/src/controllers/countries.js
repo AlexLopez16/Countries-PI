@@ -1,10 +1,8 @@
-const { Router } = require('express');
+const { response, request } = require('express');
+const { Country, Activity } = require('../db');
 const { Op } = require('sequelize')
 
-const { Country, Activity } = require('../db');
-const router = Router();
-
-router.get('/', async (req, res) => {
+const getCountries = async (req = request, res = response) => {
     const { name } = req.query;
 
     try {
@@ -30,13 +28,12 @@ router.get('/', async (req, res) => {
             msg: error.message
         })
     }
-})
+}
 
-router.get('/:id', async (req, res) => {
+const countriesById = async (req, res) => {
     const id = req.params.id.toUpperCase();
 
     try {
-
         if (id.length !== 3) {
             return res.status(400).json({
                 msg: 'ID must be only 3 characters'
@@ -59,6 +56,9 @@ router.get('/:id', async (req, res) => {
             msg: error.message
         })
     }
-})
+}
 
-module.exports = router;
+module.exports = {
+    getCountries,
+    countriesById
+}

@@ -1,13 +1,10 @@
-const { Router } = require('express');
-const { Op } = require('sequelize')
-
+const { response, request } = require('express');
 const { Country, Activity } = require('../db');
-const router = Router();
 
-router.get('/', async (req, res) => {
+const getActivities = async (req, res = response) => {
     try {
         const activities = await Activity.findAll({
-            include:{
+            include: {
                 model: Country
             }
         });
@@ -24,9 +21,9 @@ router.get('/', async (req, res) => {
             msg: error.message
         })
     }
-})
+}
 
-router.post('/', async (req, res) => {
+const createActivity = async (req = request, res = response) => {
     const { name, difficulty, duration, season, countries } = req.body;
 
     try {
@@ -56,9 +53,9 @@ router.post('/', async (req, res) => {
             msg: error.message
         })
     }
-})
+}
 
-router.put('/:id', async (req, res) => {
+const updateActivity = async (req = request, res = response) => {
     const { id } = req.params;
     const { countries } = req.body;
 
@@ -105,9 +102,9 @@ router.put('/:id', async (req, res) => {
             msg: error.message
         })
     }
-})
+}
 
-router.delete('/:id', async (req, res) => {
+const deleteActivity = async (req = request, res = response) => {
     const { id } = req.params;
 
     try {
@@ -131,6 +128,11 @@ router.delete('/:id', async (req, res) => {
             msg: error.message
         })
     }
-})
+}
 
-module.exports = router;
+module.exports = {
+    getActivities,
+    createActivity,
+    updateActivity,
+    deleteActivity
+}
